@@ -1,18 +1,110 @@
-# React + Vite
+# 🪪 Profile Card JSX Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project contains a simple React component called **UserProfile**, which displays a user's name, email, and a profile photo. It also includes a `mailto:` link so users can send an email directly.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 How to Run
 
-## React Compiler
+### 1️⃣ Install Dependencies
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+```bash
+npm install
+```
 
-Note: This will impact Vite dev & build performances.
+### 2️⃣ Start the Development Server
 
-## Expanding the ESLint configuration
+```bash
+npm start
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3️⃣ Open in Browser
+
+Visit:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🧩 Component Props
+
+The `UserProfile` component:
+
+- Accepts two props: `name` and `email`
+- Displays a title ("User Profile")
+- Shows a profile image
+- Displays the user's name and email
+- Provides a clickable email link using `mailto:`
+
+The profile image is stored locally inside an `images` folder and is imported into the component file.
+This ensures the image is bundled correctly during development and production builds.
+
+---
+
+```plaintext
+src/
+ ├── components/
+ │    ├── UserProfile.jsx
+ │    └── images/
+ │         └── matrix_possum.jpg
+ ├── App.js
+ └── index.js
+```
+---
+
+## 🚀 How to Run
+
+### 1️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+### 2️⃣ Start the Development Server
+
+```bash
+npm start
+```
+
+### 3️⃣ Open in Browser
+
+Visit:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🧩 Component Props
+
+The component accepts the following props:
+
+- **name** — The user's full name  
+- **email** — The user's email address  
+
+### 📌 Example Usage
+
+```jsx
+<UserProfile name="Jane Doe" email="jane@example.com" />
+```
+
+---
+
+## 🧪 Test Cases
+
+### ✅ Normal Test Cases
+
+- `name="Jane Doe"`, `email="jane@example.com"`
+- `name="Michael Smith"`, `email="m.smith@company.org"`
+- `name="Alicia P. Rivera"`, `email="arivera@gmail.com"`
+
+### ⚠️ Edge Test Cases
+
+- `name=""`, `email="no.name@example.com"`
+- `name="Ghost User"`, `email=""`
+- `name="Dr. #$%&*!"`, `email="weird@example.com"`
+
+---
